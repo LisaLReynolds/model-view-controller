@@ -1,0 +1,12 @@
+user visits homepage should be able to view all blog posts - public route
+
+user can register for an account, login/logout
+
+user can add a new blog post (title, contents)
+
+when user clicks on their existing post they can delete or update 
+
+user must be logged in to add, update or delete post
+
+
+create our db, create our models, seed the tables, write a few routes to test in insomnia
