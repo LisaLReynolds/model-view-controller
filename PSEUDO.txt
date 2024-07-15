@@ -10,3 +10,5 @@ user must be logged in to add, update or delete post
 
 
 create our db, create our models, seed the tables, write a few routes to test in insomnia
+
+comment on a post

@@ -1,0 +1,7 @@
+[
+  { "username": "bmacho", "password": "supersecret" },
+  { "username": "lisa", "password": "helloworld" },
+  { "username": "jacob", "password": "ilovesequelize" },
+  { "username": "mike", "password": "callmegodzilla" },
+  { "username": "billy", "password": "billybagz3000" }
+]
