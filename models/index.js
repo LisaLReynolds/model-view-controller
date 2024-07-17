@@ -1,5 +1,5 @@
 //SEQUELIZE ASSOCIATIONS
-
+const router = require("express").Router();
 const User = require("./User");
 const Post = require("./Post");
 const Comment = require("./Comment");

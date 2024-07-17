@@ -6,14 +6,7 @@ const bcrypt = require("bcrypt");
 //REGISTER A USER (user fills out Register form)
 router.post("/", async (req, res) => {
   try {
-    newUser.password = await bcrypt.hash(newUser.password, 10);
-
-    const encryptedPassword = await bcrypt.hash(req.body.password, 10);
-    const newUser = await User.create({
-      username: req.body.username,
-      password: encryptedPassword,
-    });
-
+    const newUser = await User.create(req.body);
     console.log(newUser);
 
     req.session.save(() => {
@@ -51,10 +44,26 @@ router.post("/login", async (req, res) => {
       //did they provide us with correct password?
       const authenticated = bcrypt.compare(password, userData.password); //boolean
       //if the user registered before and they give us the correct password what next?
+      if (authenticated) {
+        return res.json({ message: "you are logged in" });
+      } else {
+        res.json({ message: "incorrect credentials" });
+      }
     }
   } catch (err) {
     res.status(500).json;
   }
 });
+
+router.post("/logout", async (req, res) => {
+  if (req.session.loggedIn) {
+    req.session.destroy(() => {
+      res.status(204).end();
+    })
+  } else {
+    res.status(404).end()
+  }
+  }
+})
 
 module.exports = router;

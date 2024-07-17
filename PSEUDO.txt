@@ -9,6 +9,15 @@ when user clicks on their existing post they can delete or update
 user must be logged in to add, update or delete post
 
 
-create our db, create our models, seed the tables, write a few routes to test in insomnia
+create our db, create our models, seed the tables, write a few routes to test in insomnia 
 
+
+bcrypt, login/logout routes, express-sessions req.session.save() {loggedIn: true}
+helper function for auth, 
+
+
+build out authentication with a util function as middleware, start with login/logout and finish routes on backend
+
+start working on front end templates - bootstrap with frontend JS
+--we need homepage, login, register, newPost, eidtPost, showPosts
 comment on a post
