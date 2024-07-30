@@ -7,12 +7,12 @@ The Tech Blog application is a CMS-style blog where developers can publish posts
 ## Technology Used
 
 dependencies:
-express-handlebars
-pg
-Sequelize
-dotenv
-bcrypt
-express-session
+express-handlebars,
+pg,
+Sequelize,
+dotenv,
+bcrypt,
+express-session,
 connect-session-sequelize
 
 Database:
